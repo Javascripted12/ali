@@ -126,36 +126,4 @@ local Slider = Tab:CreateSlider({
 	end
 end)
 
-function spin()
-	local Spin = Instance.new("BodyAngularVelocity")
-	Spin.Name = "Spinning"
-	Spin.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
-	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
-end
 
-
-local Toggle = Tab:CreateToggle({
-	Name = "Spin-bot",
-	CurrentValue = false,
-	Flag = "Toggle1",
-	Callback = function(Value)
-		if Value then
-			spin()
-		else
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Spinning:Destroy()
-		end
-	end,
-})
-
-local Slider = Tab:CreateSlider({
-	Name = "SpinSpeed",
-	Range = {0, 500},
-	Increment = 1,
-	Suffix = "Speed",
-	CurrentValue = 1,
-	Flag = "Slider1",
-	Callback = function(Value)
-		spinSpeed = Value
-	end,
-})
