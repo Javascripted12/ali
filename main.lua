@@ -2,10 +2,10 @@ getgenv().spinSpeed = 20
 getgenv().bhop = false
 getgenv().bhopwait = 1
 local lplr = game:GetService("Players").LocalPlayer
-local speedSlider = {Value = 1000}
+local speedSlider = {Value = 100}
 local speed = {Enabled = false}
 local jumpPower = {Enabled = false}
-local jumpPowerSlider = {Value = 1000}
+local jumpPowerSlider = {Value = 100}
 local oldJp
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
@@ -61,7 +61,7 @@ local Toggle = Tab:CreateToggle({
 
 local Slider = Tab:CreateSlider({
     Name = "walkspeed",
-    Range = {0, 100},
+    Range = {0, 350},
     Increment = 1,
     Suffix = "Speed",
     CurrentValue = 5,
@@ -100,7 +100,7 @@ local Slider = Tab:CreateSlider({
 
  local Slider = Tab:CreateSlider({
     Name = "JumpPower",
-    Range = {0, 100},
+    Range = {0, 350},
     Increment = 1,
     Suffix = "Jump Power",
     CurrentValue = 5,
