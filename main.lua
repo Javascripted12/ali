@@ -2,10 +2,10 @@ getgenv().spinSpeed = 20
 getgenv().bhop = false
 getgenv().bhopwait = 1
 local lplr = game:GetService("Players").LocalPlayer
-local speedSlider = {Value = 100000000}
+local speedSlider = {Value = 1000}
 local speed = {Enabled = false}
 local jumpPower = {Enabled = false}
-local jumpPowerSlider = {Value = 1000000000}
+local jumpPowerSlider = {Value = 1000}
 local oldJp
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
